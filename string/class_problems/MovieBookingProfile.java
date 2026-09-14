@@ -8,9 +8,7 @@ public class MovieBookingProfile {
     }
 
     public MovieBookingProfile(String name) {
-
         this();
-
         this.name = name;
     }
 
@@ -32,24 +30,22 @@ public class MovieBookingProfile {
 
     public void setOtp(String otp) {
 
-        if (otp != null
-                && otp.matches("\\d{4,6}")) {
-
+        if (otp != null && otp.matches("\\d{4,6}")) {
             this.otp = otp;
         }
     }
 
     public static void main(String[] args) {
 
-        MovieBookingProfile p =
+        MovieBookingProfile profile =
                 new MovieBookingProfile("Rahul Dev");
 
-        System.out.println(p.getName());
+        System.out.println(profile.getName());
 
-        p.setConfirmed(true);
+        profile.setConfirmed(true);
 
-        System.out.println(p.isConfirmed());
+        System.out.println(profile.isConfirmed());
 
-        p.setOtp("4471");
+        profile.setOtp("4471");
     }
 }

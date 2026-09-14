@@ -42,8 +42,7 @@ public class CineScreen {
         c.bookSeat();
 
         System.out.println(
-                "Available seats: "
-                        + c.getSeatsAvailable()
+                "Available seats: " + c.getSeatsAvailable()
         );
 
         c.cancelBooking();
@@ -51,8 +50,7 @@ public class CineScreen {
         c.cancelBooking();
 
         System.out.println(
-                "Available seats: "
-                        + c.getSeatsAvailable()
+                "Available seats: " + c.getSeatsAvailable()
         );
     }
 }

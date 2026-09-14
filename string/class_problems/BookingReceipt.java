@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public final class BookingReceipt {
+public class BookingReceipt {
 
     private final String bookingId;
     private final String[] seatNumbers;
@@ -10,6 +10,7 @@ public final class BookingReceipt {
             String[] seatNumbers) {
 
         this.bookingId = bookingId;
+
         this.seatNumbers =
                 Arrays.copyOf(
                         seatNumbers,
@@ -91,20 +92,27 @@ public final class BookingReceipt {
                 b.withUpdatedSeat(1, "A3");
 
         System.out.println(
-                Arrays.toString(b.getSeatNumbers())
+                Arrays.toString(
+                        b.getSeatNumbers()
+                )
         );
 
         System.out.println(
-                Arrays.toString(updated.getSeatNumbers())
+                Arrays.toString(
+                        updated.getSeatNumbers()
+                )
         );
 
         BookingReceipt[] receipts = {
+
                 new GroupBookingReceipt(
                         "CH-2002",
                         new String[]{"B1", "B2"},
                         2
                 ),
+
                 null,
+
                 new BookingReceipt(
                         "CH-3003",
                         new String[]{"C1"}
@@ -116,7 +124,6 @@ public final class BookingReceipt {
         );
     }
 }
-
 
 class GroupBookingReceipt extends BookingReceipt {
 
